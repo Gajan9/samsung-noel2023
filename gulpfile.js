@@ -34,6 +34,13 @@ gulp.task('html', function () {
       .pipe(gulp.dest('dist')); // Dossier de destination pour les fichiers HTML
   });
 
+  // Tâche pour optimiser les images
+gulp.task('images', function () {
+  return gulp
+    .src('src/img/*') // Chemin des fichiers images
+    .pipe(gulp.dest('dist/img')) // Dossier de destination pour les images optimisées
+});
+
 // Tâche pour surveiller les modifications des fichiers
 gulp.task('watch', function () {
   browserSync.init({
@@ -46,4 +53,4 @@ gulp.task('watch', function () {
 });
 
 // Tâche par défaut
-gulp.task('default', gulp.parallel('sass', 'js', 'html', 'watch'));
+gulp.task('default', gulp.parallel('sass', 'js', 'html','images', 'watch'));
