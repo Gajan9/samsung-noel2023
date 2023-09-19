@@ -34,7 +34,6 @@ gulp.task('html', function () {
       .pipe(gulp.dest('dist')); // Dossier de destination pour les fichiers HTML
   });
 
-
 // Tâche pour surveiller les modifications des fichiers
 gulp.task('watch', function () {
   browserSync.init({

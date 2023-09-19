@@ -1,3 +1,22 @@
-h1 {
-    background-color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+#nav-menu {
+    background-color: rgb(151, 151, 151);
+    text-align: center;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        display: inline-block;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        margin: 0 20px;
+    }
+  }
