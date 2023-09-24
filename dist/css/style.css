@@ -126,15 +126,16 @@ body {
   position: absolute;
   left: 0px;
   top: 0px;
-  height: 426px;
-  width: 640px;
-  background-color: #ffa1a1;
+  height: 400px;
+  width: 600px;
+  background-color: #4f4242;
   visibility: visible;
 }
 
 .slideshow {
   position: relative;
   height: 500px;
-  width: 1000vw;
-  background-color: #543c3c;
+  width: auto;
+  background-color: #af1c1c;
+  overflow: hidden;
 }
