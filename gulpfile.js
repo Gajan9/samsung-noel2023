@@ -19,7 +19,7 @@ gulp.task('sass', function () {
 // Tâche pour minifier et renommer les fichiers JS
 gulp.task('js', function () {
   return gulp
-    .src('src/js/main.js')
+    .src('src/js/script.js')
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/js'))

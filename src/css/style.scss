@@ -1,22 +1,204 @@
+/* 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#nav-menu {
-    background-color: rgb(151, 151, 151);
+.nav-menu {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
     text-align: center;
+    width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     a {
-        display: inline-block;
         color: #000000;
         text-decoration: none;
-        text-align: center;
-        margin: 0 20px;
+        margin: 0 22px;
+    }
+
+    .vide{
+        width: 50px;
+        height: 50px;
     }
   }
+
+ .bg-image{
+    position: relative;
+    top: 15px;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/bg-noel.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    
+ }
+
+ .introduction{
+    position: relative;
+    top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 120px;
+
+    .titre-principal {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        h1{
+            font-size: 5vw;
+            color: #ffffff;
+        }
+        p{
+            font-size: 2.2vw;
+            color: #ffffff;
+        }
+    }
+
+    .intro-secondaire{
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 16px;
+        color: #ffffff;
+        width: 30%;
+    }
+ }
+ .sect-personnae {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+ }
+
+ */
+
+ @font-face {
+	font-family: 'SamsungSans';
+	src: url(‘/fonts/SamsungSans-Bold.ttf’) format(‘woff2’),
+		url(‘fonts/SamsungSans-Light.ttf’) format(‘truetype’),
+        url(‘fonts/SamsungSans-Medium.ttf’) format(‘truetype’),
+        url(‘fonts/SamsungSans-Regular.ttf’) format(‘truetype’)
+}
+body {
+	font-family: 'SamsungSans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-menu {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-menu a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 22px;
+    font-weight: 500;
+}
+
+.nav-menu .vide{
+    width: 50px;
+    height: 50px;
+}
+
+.section {
+    padding: 100px 0; 
+    color: #fff; 
+}
+
+.section1 {
+    background-color: #000000; 
+}
+
+.section-image {
+    max-width: auto;
+    height: auto;
+}
+
+.section2,
+.section4 {
+    padding-left: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section2 {
+    background-color: #000000;
+}
+
+.section3, .section5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EBF98D;
+    color: #000000;
+}
+
+.section4 {
+    background-color: #EAEFEF;
+    color: black;
+}
+
+.section-content {
+    flex: 1;
+    padding: 0px 120px;
+}
+
+.section-content h2{
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 24px;
+}
+
+.section-content p{
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 160%;
+    margin-bottom: 24px;
+}
+
+.button-light{
+    width: 170px;
+    height: 42px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 8px 28px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+.button-dark{
+    width: 170px;
+    height: 42px;
+    font-size: 14px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 8px 28px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+
