@@ -8,7 +8,6 @@
 body {
 	font-family: 'SamsungSans', sans-serif;
     background-color: #000000; 
-
 }
 
 * {
@@ -132,4 +131,20 @@ body {
     } */
 }
 
+.images{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 426px;
+    width: 640px;
+    background-color: #ffa1a1;
+    visibility: visible;
+}
+
+.slideshow{
+    position: relative;
+    height: 500px;
+    width: 1000vw;
+    background-color: #543c3c;
+}
 
