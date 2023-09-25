@@ -9,7 +9,7 @@ const browserSync = require('browser-sync').create();
 // Tâche pour compiler les fichiers SCSS en CSS
 gulp.task('sass', function () {
   return gulp
-    .src('src/css/style.scss')
+    .src('src/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('dist/css'))

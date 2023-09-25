@@ -36,14 +36,12 @@ body {
   height: 25px;
 }
 
-.section {
-  padding: 100px 0;
-  color: #fff;
-}
-
-.section-image {
-  max-width: auto;
+.section-image1 {
+  width: 100%;
   height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section1 {
@@ -53,87 +51,74 @@ body {
   overflow: hidden;
 }
 
-.section-image1 {
-  width: 100%;
-  height: auto;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+.category {
+  color: #fff;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
 }
-
-.section2,
-.section4 {
+.category.reverse {
+  flex-direction: row-reverse;
+}
+.category.thm-gamer {
   padding-left: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
-
-.section3,
-.section5 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.category.thm-sportif {
   background-color: #EBF98D;
   color: #000000;
+  padding-right: 120px;
 }
-
-.section4 {
+.category.thm-esthete {
   background-color: #EAEFEF;
   color: black;
+  padding-left: 120px;
+}
+.category.thm-epicurien {
+  background-color: #EBF98D;
+  color: #000000;
+  padding-right: 120px;
 }
 
-.section-content {
+.category-content {
   flex: 1;
   padding: 0px 120px;
 }
-.section-content h2 {
+.category-content h2 {
   font-size: 54px;
   font-weight: 500;
   line-height: 130%;
   margin-bottom: 24px;
 }
-.section-content p {
+.category-content p {
   font-size: 26px;
   font-weight: 300;
   line-height: 160%;
   margin-bottom: 24px;
 }
 
-.button-light {
-  width: 170px;
-  height: 42px;
-  font-size: 14px;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 24px;
-  cursor: pointer;
-}
-.button-light:hover {
-  background-color: #000000;
-  color: #ffffff;
-  border: 1px solid #fff;
+/* .button-light{
+    width: 170px;
+    height: 42px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 8px 28px;
+    border-radius: 24px;
+    cursor: pointer;
 }
 
-.button-dark {
-  width: 170px;
-  height: 42px;
-  font-size: 14px;
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 24px;
-  cursor: pointer;
-}
-.button-dark:hover {
-  background-color: #fff;
-  color: #000000;
-  border: 1px solid #000000;
-}
-
+.button-dark{
+    width: 170px;
+    height: 42px;
+    font-size: 14px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 8px 28px;
+    border-radius: 24px;
+    cursor: pointer;
+} */
 .images {
   position: absolute;
   left: 0px;

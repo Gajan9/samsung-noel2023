@@ -1,0 +1,37 @@
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.gamer {
+        background-color: #000;
+        padding-top: 70px;
+    }
+    &.sportif {
+        background-color: #EBF98D;
+    }
+    &.esthete {
+        background-color: #EAEFEF;
+    }
+    &.epicurien {
+        background-color: #EBF98D;
+    }
+
+}
+
+.item-content {
+    flex: 1;
+    background-color: #fff;
+    margin-right: 6.25vw;
+} 
+
+.hero img{
+    height: auto;
+    width: 50%;
+}
+
+.hero-section{
+    flex: 1;
+    padding: 0 120px;
+}

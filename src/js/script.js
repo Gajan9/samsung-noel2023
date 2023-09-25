@@ -1,4 +1,4 @@
-console.log("hello");
+/* console.log("hello");
 
 setInterval("deplace()", 10);
 nbImage = 4;
@@ -18,4 +18,5 @@ function deplace() {
         }
         document.getElementById("image" + (i+1)).style.left = positionCourante[i] + "px";
     }
-}
+} */
+

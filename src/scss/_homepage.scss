@@ -1,0 +1,101 @@
+.hero-page {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg-noel.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;    
+        background: linear-gradient(0deg, #040616 0.38%, rgba(4, 6, 22, 0.20) 99.68%);
+    }
+}
+
+.container-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 6.25vw;
+    padding-top: 200px;
+    padding-right: 12.5vw;
+    
+    h1{
+        margin-bottom: 54px;
+    }
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.category {
+    color: #fff; 
+    padding: 100px 0; 
+    display: flex;
+    align-items: center;
+
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+
+    &.thm-gamer {
+        background-color: #000;
+        padding-left: 6.25vw;
+    }
+
+    &.thm-sportif {
+        background-color: #EBF98D;
+        color: #000;
+        padding-right: 6.25vw;
+    }
+
+    &.thm-esthete {
+        background-color: #EAEFEF;
+        color: #000;
+        padding-left: 6.25vw;
+    }
+
+    &.thm-epicurien {
+        background-color: #EBF98D;
+        color: #000;
+        padding-right: 6.25vw;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.category-content {
+    padding: 0px 6.25vw;
+} 
+
+
+
+/* CAROUSSEL
+
+.images{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 400px;
+    width: 600px;
+    background-color: #4f4242;
+    visibility: visible;
+}
+
+.slideshow{
+    position: relative;
+    height: 500px;
+    width: auto;
+    background-color: #af1c1c;
+    overflow: hidden;
+} */

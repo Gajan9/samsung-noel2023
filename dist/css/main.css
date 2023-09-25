@@ -1,256 +1,270 @@
 @charset "UTF-8";
 @font-face {
   font-family: "SamsungSans";
-  src: url(‘/fonts/SamsungSans-Bold.ttf’) format(‘woff2’), url(‘fonts/SamsungSans-Light.ttf’) format(‘truetype’), url(‘fonts/SamsungSans-Medium.ttf’) format(‘truetype’), url(‘fonts/SamsungSans-Regular.ttf’) format(‘truetype’);
+  src: url(‘fonts/SamsungSans-Bold.ttf’) format(‘woff2’), url(‘fonts/SamsungSans-Light.ttf’) format(‘truetype’), url(‘fonts/SamsungSans-Medium.ttf’) format(‘truetype’), url(‘fonts/SamsungSans-Regular.ttf’) format(‘truetype’) url(‘fonts/SamsungSans-Thin.ttf’) format(‘truetype’);
 }
-body {
-  font-family: "SamsungSans", sans-serif;
-  background-color: #000000;
+.title-XS {
+  color: #FFF;
+  text-align: center;
+  font-family: SamsungSans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 21.6px */
+}
+
+.title-M {
+  color: #FFF;
+  font-family: SamsungSans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 51.2px */
+}
+
+.title-L {
+  color: #FFF;
+  font-family: SamsungSans;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 70.2px */
+  margin-bottom: 24px;
+}
+
+.title-XL {
+  color: #FFF;
+  font-family: SamsungSans;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 93.6px */
+}
+
+.body-S {
+  color: #000;
+  font-family: SamsungSans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 24px */
+  margin-bottom: 24px;
+}
+
+.body-M {
+  color: #FFF;
+  font-family: SamsungSans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+
+.body-L {
+  color: #FFF;
+  font-family: SamsungSans;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 41.6px */
+  margin-bottom: 24px;
+}
+
+.dark {
+  color: #000;
+}
+
+.light {
+  color: #FFF;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  border: 0;
 }
 
-.nav-menu {
-  width: 100%;
-  height: 70px;
-  background-color: rgb(255, 255, 255);
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+ol, ul {
+  list-style: none;
 }
-.nav-menu a {
-  color: #000000;
+
+a {
   text-decoration: none;
-  font-size: 16px;
-  margin: 0 22px;
-  font-weight: 500;
-}
-.nav-menu .vide {
-  width: 50px;
-  height: 50px;
 }
 
-.section {
-  padding: 100px 0;
-  color: #fff;
+body {
+  background-color: #ffffff;
 }
 
-.section-image {
-  max-width: auto;
-  height: auto;
-}
-
-.section1 {
-  padding: 0;
-}
-
-.section2,
-.section4 {
-  padding-left: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.section3,
-.section5 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #EBF98D;
-  color: #000000;
-}
-
-.section4 {
-  background-color: #EAEFEF;
-  color: black;
-}
-
-.section-content {
-  flex: 1;
-  padding: 0px 120px;
-}
-.section-content h2 {
-  font-size: 54px;
-  font-weight: 500;
-  line-height: 130%;
-  margin-bottom: 24px;
-}
-.section-content p {
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 160%;
-  margin-bottom: 24px;
-}
-
-.button-light {
-  width: 170px;
+.samsungBtn {
+  width: auto;
   height: 42px;
+  padding: 8px 28px;
+  border-radius: 24px;
   font-size: 14px;
+  cursor: pointer;
+}
+.samsungBtn.btn-light {
   background-color: #ffffff;
   color: #000000;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 24px;
-  cursor: pointer;
-  /*     &:hover{
-          background-color: #000000; 
-          color: #ffffff;
-          border: 1px solid #fff;
-      } */
 }
-
-.button-dark {
-  width: 170px;
-  height: 42px;
-  font-size: 14px;
+.samsungBtn.btn-light.variant-border {
+  width: auto;
+  border: 1px solid #000000;
+}
+.samsungBtn.btn-dark {
   background-color: #000000;
   color: #ffffff;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 24px;
-  cursor: pointer;
-  /*     &:hover{
-          background-color: #fff; 
-          color: #000000;
-          border: 1px solid #000000;
-      } */
-}
-
-@font-face {
-  font-family: "SamsungSans";
-  src: url(‘fonts/SamsungSans-Bold.ttf’) format(‘woff2’), url(‘fonts/SamsungSans-Light.ttf’) format(‘truetype’), url(‘fonts/SamsungSans-Medium.ttf’) format(‘truetype’), url(‘fonts/SamsungSans-Regular.ttf’) format(‘truetype’);
-}
-body {
-  font-family: "SamsungSans", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .nav-menu {
   width: 100%;
   height: 70px;
   background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.32);
   z-index: 1;
+}
+.nav-menu.variant-shadow {
+  box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.32);
 }
 .nav-menu a {
   color: #000000;
-  text-decoration: none;
   font-size: 16px;
   margin: 0 22px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .nav-menu .vide {
-  width: 50px;
-  height: 50px;
+  width: 158px;
+  height: 25px;
 }
 
-.section {
-  color: #fff;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero.gamer {
+  background-color: #000;
+  padding-top: 70px;
+}
+.hero.sportif {
+  background-color: #EBF98D;
+}
+.hero.esthete {
+  background-color: #EAEFEF;
+}
+.hero.epicurien {
+  background-color: #EBF98D;
 }
 
-.section img {
+.item-content {
+  flex: 1;
+  background-color: #fff;
+  margin-right: 6.25vw;
+}
+
+.hero img {
   height: auto;
   width: 50%;
 }
 
-.section1 {
-  background-color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.section1 .section-content p {
-  font-size: 26px;
-  padding-left: 120px;
-}
-
-.section1 .section-content h1 {
-  padding-left: 120px;
-  font-size: 54px;
-  font-weight: 500;
-  line-height: 130%;
-  margin-bottom: 24px;
-}
-
-.section2, .section4 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #000000;
-}
-
-.section3 {
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.section-content {
+.hero-section {
   flex: 1;
-  padding-right: 120px;
-}
-.section-content h2 {
-  font-size: 54px;
-  font-weight: 500;
-  line-height: 130%;
-  margin-bottom: 24px;
-}
-.section-content p {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 160%;
-  margin-bottom: 24px;
+  padding: 0 120px;
 }
 
-.button-light {
-  width: 170px;
-  height: 42px;
-  font-size: 14px;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 24px;
-  cursor: pointer;
+.hero-page {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/bg-noel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hero-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(0deg, #040616 0.38%, rgba(4, 6, 22, 0.2) 99.68%);
 }
 
-.button-light2 {
-  width: auto;
-  height: 42px;
-  font-size: 14px;
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
-  padding: 8px 28px;
-  border-radius: 24px;
-  cursor: pointer;
+.container-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6.25vw;
+  padding-top: 200px;
+  padding-right: 12.5vw;
+}
+.container-hero h1 {
+  margin-bottom: 54px;
 }
 
-.button-dark {
-  width: 170px;
-  height: 42px;
-  font-size: 14px;
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  padding: 8px 28px;
-  border-radius: 24px;
-  cursor: pointer;
+.hero-content {
+  display: flex;
+  flex-direction: row;
 }
+
+.category {
+  color: #fff;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+}
+.category.reverse {
+  flex-direction: row-reverse;
+}
+.category.thm-gamer {
+  background-color: #000;
+  padding-left: 6.25vw;
+}
+.category.thm-sportif {
+  background-color: #EBF98D;
+  color: #000;
+  padding-right: 6.25vw;
+}
+.category.thm-esthete {
+  background-color: #EAEFEF;
+  color: #000;
+  padding-left: 6.25vw;
+}
+.category.thm-epicurien {
+  background-color: #EBF98D;
+  color: #000;
+  padding-right: 6.25vw;
+}
+.category img {
+  width: 100%;
+  height: auto;
+}
+
+.category-content {
+  padding: 0px 6.25vw;
+}
+
+/* CAROUSSEL
+
+.images{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 400px;
+    width: 600px;
+    background-color: #4f4242;
+    visibility: visible;
+}
+
+.slideshow{
+    position: relative;
+    height: 500px;
+    width: auto;
+    background-color: #af1c1c;
+    overflow: hidden;
+} */
