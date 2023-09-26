@@ -6,14 +6,14 @@ function SlideDown() {
     //scrolltop = position actuelle du scroll, clientheight = hauteur de la fenêtre
     const { scrollTop, clientHeight } = document.documentElement;
     console.log(scrollTop, clientHeight)
-    // on parcour les éléments avec la class "slide-donw"
+    // on parcours les éléments avec la class "slide-donw"
     for (const slideDown of slideDownDiv) {
         //distance entre le haut de la fenetre et la div avec la class "slide-down" 
         const topElementToTopViewport = slideDown.getBoundingClientRect().top;
         console.log(slideDown.getBoundingClientRect().top)
         console.log("scroll juqu'au prochain div :", topElementToTopViewport, "div n", compteurDown)
 
-        if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
+        if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7) {
 
             //si ma div n'a pas la classe "active" alors je l'ajoute 
             if (!slideDown.classList.contains('active')) {
