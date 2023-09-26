@@ -1,72 +1,53 @@
-const { css } = require("@emotion/react")
-
-/* console.log("hello");
-
-setInterval("deplace()", 10);
-nbImage = 4;
-largeurImage = 640;
-positionCourante = new Array(nbImage);
-
-for (i = 0; i < nbImage; i++) {
-    positionCourante [i] = i * largeurImage;
-}
-
-function deplace() {
-    for (i=0; i < nbImage; i++) {
-        positionCourante[i] -= 1;
-
-        if (positionCourante[i] < -largeurImage) {
-            positionCourante[i] = (nbImage - 1) * largeurImage;
-        }
-        document.getElementById("image" + (i+1)).style.left = positionCourante[i] + "px";
-    }
-} */
-
-/* const slideDown = document.getElementsByClassName("slide-down");
-console.log(slideDown);
-
-window.addEventListener('scroll', () => {
-    const {scrollTop, clientHeight} = document.documentElement;
-    const topElementToTopViewport = slideDown.getBoundingClientRect().top;
-    console.log(topElementToTopViewport);
-    if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8){
-        slideDown.classList.add('active');
-    }
-});
- */
-
+//selectionne les div avec la class "slide-down"
 const slideDownDiv = document.getElementsByClassName("slide-down");
-let compteur = 0;
+let compteurDown = 0;
 
-window.addEventListener('scroll', () => {
+function SlideDown() {
+    //scrolltop = position actuelle du scroll, clientheight = hauteur de la fenêtre
     const { scrollTop, clientHeight } = document.documentElement;
-
+    console.log(scrollTop, clientHeight)
+    // on parcour les éléments avec la class "slide-donw"
     for (const slideDown of slideDownDiv) {
+        //distance entre le haut de la fenetre et la div avec la class "slide-down" 
         const topElementToTopViewport = slideDown.getBoundingClientRect().top;
+        console.log(slideDown.getBoundingClientRect().top)
+        console.log("scroll juqu'au prochain div :", topElementToTopViewport, "div n", compteurDown)
+
         if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
+
+            //si ma div n'a pas la classe "active" alors je l'ajoute 
             if (!slideDown.classList.contains('active')) {
                 slideDown.classList.add('active');
-                compteur++; 
+                compteurDown++; 
             }
         }
     }
-});
+}
 
 
+const slideUpDiv = document.getElementsByClassName("slide-up");
+let compteurUp = 0;
 
+function SlideUp() {
+    const { scrollTop, clientHeight } = document.documentElement;
 
-
-/* const slideUp = document.querySelector('.slide-up');
-
-window.addEventListener('scroll', () => {
-
-    const {scrollTop, clientHeight} = document.documentElement;
-    
-    const topElementToTopViewport = slideUp.getBoundingClientRect().top;
-
-    console.log(topElementToTopViewport);
-
-    if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8){
-        slideUp.classList.add('active')
+    for (const slideUp of slideUpDiv) {
+        const topElementToTopViewport = slideUp.getBoundingClientRect().top;
+        if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
+            if (!slideUp.classList.contains('active')) {
+                slideUp.classList.add('active');
+                compteurUp++; 
+            }
+        }
     }
-}); */
+}
+
+//réagit lorsqu'on scroll
+window.addEventListener('scroll', SlideDown);
+window.addEventListener('scroll', SlideUp);
+
+
+
+
+
+

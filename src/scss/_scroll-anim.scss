@@ -1,0 +1,18 @@
+.slide-down {
+    transform: translateY(-20%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+.slide-up {
+    transform: translateY(20%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+.slide-down.active, .slide-up.active {
+    transform: translateY(0%);
+    opacity: 1;
+}
