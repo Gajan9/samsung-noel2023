@@ -25,6 +25,11 @@
     margin-right: 6.25vw;
 } 
 
+/* .hero-image {
+    height: auto;
+    width: 50%;
+}
+ */
 .hero img {
     height: auto;
     width: 50%;
@@ -33,4 +38,27 @@
 .hero-section {
     flex: 1;
     margin: 0px 6.25vw;
+}
+
+//Animation scroll apparition
+
+.slide-down {
+    transform: translateY(-20%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+.slide-up {
+    transform: translateY(20%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+
+.slide-down.active, .slide-up.active {
+    transform: translateY(0%);
+    opacity: 1;
+    z-index: -1;
 }

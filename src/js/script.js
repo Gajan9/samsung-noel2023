@@ -1,3 +1,5 @@
+const { css } = require("@emotion/react")
+
 /* console.log("hello");
 
 setInterval("deplace()", 10);
@@ -20,3 +22,32 @@ function deplace() {
     }
 } */
 
+const slideDown = document.querySelector('.slide-down');
+
+window.addEventListener('scroll', () => {
+
+    const {scrollTop, clientHeight} = document.documentElement;
+
+    const topElementToTopViewport = slideDown.getBoundingClientRect().top;
+
+    console.log(topElementToTopViewport);
+
+    if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8){
+        slideDown.classList.add('active');
+    }
+});
+
+const slideUp = document.querySelector('.slide-up');
+
+window.addEventListener('scroll', () => {
+
+    const {scrollTop, clientHeight} = document.documentElement;
+    
+    const topElementToTopViewport = slideUp.getBoundingClientRect().top;
+
+    console.log(topElementToTopViewport);
+
+    if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8){
+        slideUp.classList.add('active')
+    }
+});
