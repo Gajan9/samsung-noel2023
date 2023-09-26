@@ -4,7 +4,7 @@
     background-image: url("../img/bg-noel.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: #080A15;
+    background-color: #000000;
 }
 
 .hero-container {
@@ -30,7 +30,7 @@
     color: #fff; 
     padding: 6.94vw 0; 
     display: flex;
-    align-items: center;
+    flex-direction: column;
 
     &.reverse {
         flex-direction: row-reverse;
@@ -59,34 +59,21 @@
         padding-right: 6.25vw;
     }
 
-    img {
-        width: 100%;
-        height: auto;
-    }
+
 }
 
 .category-content {
     margin: 0px 6.25vw;
 } 
 
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-
-/* CAROUSSEL
-
-.images{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 400px;
-    width: 600px;
-    background-color: #4f4242;
-    visibility: visible;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-.slideshow{
-    position: relative;
-    height: 500px;
-    width: auto;
-    background-color: #af1c1c;
-    overflow: hidden;
-} */

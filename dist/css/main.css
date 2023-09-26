@@ -27,14 +27,14 @@
   font-family: "SamsungSansBold";
   font-style: normal;
   font-weight: normal;
-  src: local("Samsung Sharp Sans Bold"), url("../font/samsungsharpsans-bold.woff") format("woff");
+  src: local("Samsung Sharp Sans Bold"), url("../fonts/samsungsharpsans-bold.woff") format("woff");
 }
 .title-XS {
   color: #FFF;
   text-align: center;
   font-family: "SamsungSansBold", sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: normal;
   line-height: 120%; /* 21.6px */
 }
 
@@ -42,7 +42,7 @@
   color: #FFF;
   font-family: "SamsungSansMedium", sans-serif;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 160%; /* 51.2px */
 }
 
@@ -50,7 +50,7 @@
   color: #FFF;
   font-family: "SamsungSansBold", sans-serif;
   font-size: 54px;
-  font-weight: 700;
+  font-weight: normal;
   line-height: 130%; /* 70.2px */
   margin: 24px 0px;
 }
@@ -67,7 +67,7 @@
   color: #000;
   font-family: "SamsungSansMedium", sans-serif;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: normal;
   line-height: 160%; /* 24px */
   margin-bottom: 24px;
 }
@@ -76,7 +76,7 @@
   color: #FFF;
   font-family: "SamsungSansMedium", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 160%; /* 25.6px */
 }
 
@@ -85,7 +85,7 @@
   font-family: "SamsungSansMedium", sans-serif;
   font-size: 26px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 160%; /* 41.6px */
   margin-bottom: 24px;
 }
@@ -126,6 +126,7 @@ body {
   border-radius: 24px;
   font-size: 14px;
   margin-bottom: 24px;
+  margin-right: 10px;
   cursor: pointer;
 }
 .samsungBtn.btn-light {
@@ -172,6 +173,54 @@ body {
   position: fixed;
 }
 
+.caroussel {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.caroussel-flex {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  animation: animation 10s linear infinite alternate;
+}
+.caroussel-flex .item1 img {
+  background-color: #A6B2F6;
+}
+.caroussel-flex .item2 img {
+  background-color: #E87D4C;
+}
+.caroussel-flex .item3 img {
+  background-color: #FFADF5;
+}
+.caroussel-flex .item4 img {
+  background-color: #EA61A3;
+}
+.caroussel-flex .item5 img {
+  background-color: #73CAE8;
+}
+.caroussel-flex .item6 img {
+  background-color: #FEE074;
+}
+
+.card-product h3 {
+  margin: 20px 0;
+}
+
+.card-product p {
+  margin: 0 10px;
+}
+
+@keyframes animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
 .hero {
   display: flex;
   align-items: center;
@@ -190,11 +239,32 @@ body {
 .hero.epicurien {
   background-color: #EBF98D;
 }
+.hero .hero-section {
+  flex: 1;
+  margin: 0px 6.25vw;
+}
+.hero .hero-image {
+  width: 50%;
+  height: auto;
+}
 
-.item-content {
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.products .item-content {
   flex: 1;
   background-color: #fff;
-  margin-right: 6.25vw;
+  margin-right: 12.5vw;
+  margin-left: 6.25vw;
+  width: 37.5vw;
+}
+.products .section-image {
+  display: block;
+  height: auto;
+  width: 37.5vw;
+  margin-left: 6.25vw;
 }
 
 /* .hero-image {
@@ -202,16 +272,6 @@ body {
     width: 50%;
 }
  */
-.hero img {
-  height: auto;
-  width: 50%;
-}
-
-.hero-section {
-  flex: 1;
-  margin: 0px 6.25vw;
-}
-
 .slide-down {
   transform: translateY(-20%);
   opacity: 0;
@@ -236,7 +296,7 @@ body {
   background-image: url("../img/bg-noel.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: #080A15;
+  background-color: #000000;
 }
 
 .hero-container {
@@ -260,7 +320,7 @@ body {
   color: #fff;
   padding: 6.94vw 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 .category.reverse {
   flex-direction: row-reverse;
@@ -284,31 +344,17 @@ body {
   color: #000;
   padding-right: 6.25vw;
 }
-.category img {
-  width: 100%;
-  height: auto;
-}
 
 .category-content {
   margin: 0px 6.25vw;
 }
 
-/* CAROUSSEL
-
-.images{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 400px;
-    width: 600px;
-    background-color: #4f4242;
-    visibility: visible;
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
-.slideshow{
-    position: relative;
-    height: 500px;
-    width: auto;
-    background-color: #af1c1c;
-    overflow: hidden;
-} */
+.container img {
+  width: 100%;
+  height: auto;
+}

@@ -22,22 +22,41 @@ function deplace() {
     }
 } */
 
-const slideDown = document.querySelector('.slide-down');
+/* const slideDown = document.getElementsByClassName("slide-down");
+console.log(slideDown);
 
 window.addEventListener('scroll', () => {
-
     const {scrollTop, clientHeight} = document.documentElement;
-
     const topElementToTopViewport = slideDown.getBoundingClientRect().top;
-
     console.log(topElementToTopViewport);
-
     if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8){
         slideDown.classList.add('active');
     }
 });
+ */
 
-const slideUp = document.querySelector('.slide-up');
+const slideDownDiv = document.getElementsByClassName("slide-down");
+let compteur = 0;
+
+window.addEventListener('scroll', () => {
+    const { scrollTop, clientHeight } = document.documentElement;
+
+    for (const slideDown of slideDownDiv) {
+        const topElementToTopViewport = slideDown.getBoundingClientRect().top;
+        if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
+            if (!slideDown.classList.contains('active')) {
+                slideDown.classList.add('active');
+                compteur++; 
+            }
+        }
+    }
+});
+
+
+
+
+
+/* const slideUp = document.querySelector('.slide-up');
 
 window.addEventListener('scroll', () => {
 
@@ -50,4 +69,4 @@ window.addEventListener('scroll', () => {
     if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8){
         slideUp.classList.add('active')
     }
-});
+}); */

@@ -17,28 +17,50 @@
     &.epicurien {
         background-color: #EBF98D;
     }
+    .hero-section {
+        flex: 1;
+        margin: 0px 6.25vw;
+    }
+    .hero-image{
+        width: 50%;
+        height: auto;
+    }
+    
 }
 
-.item-content {
-    flex: 1;
-    background-color: #fff;
-    margin-right: 6.25vw;
-} 
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .item-content {
+        flex: 1;
+        background-color: #fff;
+        margin-right: 12.5vw;
+        margin-left: 6.25vw;
+        width: 37.5vw;
+    } 
+    .section-image{
+        display: block;
+        height: auto;
+        width: 37.5vw;
+        margin-left: 6.25vw;
+    }
+
+}
+
+
 
 /* .hero-image {
     height: auto;
     width: 50%;
 }
  */
-.hero img {
-    height: auto;
-    width: 50%;
-}
 
-.hero-section {
-    flex: 1;
-    margin: 0px 6.25vw;
-}
+
+
+
+
 
 //Animation scroll apparition
 
