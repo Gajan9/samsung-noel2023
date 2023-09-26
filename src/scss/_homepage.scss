@@ -4,23 +4,12 @@
     background-image: url("../img/bg-noel.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: #000;
-    
+    background-color: #080A15;
 }
 
-
-.body-M .light {
-    margin-left: 120px;
-    align-items: end;
-}
 .container-hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-left: 6.25vw;
-    padding-top: 200px;
-    padding-right: 12.5vw;
-    
+    padding: 200px 12.5vw 0px 6.25vw ;
+
     h1{
         margin-bottom: 54px;
     }
@@ -29,6 +18,12 @@
 .hero-content {
     display: flex;
     flex-direction: row;
+
+    p.body-M.light {
+        display: flex;
+        padding-left: 6.25vw;
+        align-items: end;
+    }
 }
 
 .category {
@@ -71,7 +66,7 @@
 }
 
 .category-content {
-    padding: 0px 6.25vw;
+    margin: 0px 6.25vw;
 } 
 
 

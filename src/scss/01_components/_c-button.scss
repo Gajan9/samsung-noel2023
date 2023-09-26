@@ -1,10 +1,14 @@
 .samsungBtn {
     width: auto;
+    font-family: 'SamsungSansMedium', sans-serif;
     height: 42px;
     padding: 8px 28px;
     border-radius: 24px;
     font-size: 14px;
+    margin-bottom: 24px;
     cursor: pointer;
+
+
 
     &.btn-light{
         background-color: #ffffff;

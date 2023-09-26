@@ -1,51 +1,72 @@
-@charset "UTF-8";
+/* @font-face {
+	font-family: 'SamsungSansBold';
+	src: url('../fonts/SamsungSans-Bold.ttf') format('truetype');
+
+    font-stretch: normal;
+    font-weight: normal;
+    font-style: normal
+}  
+
 @font-face {
-  font-family: "SamsungSans";
-  src: url("../fonts/SamsungSans-Bold.ttf") format(‘woff2’), url("../fonts/SamsungSans-Light.ttf") format(‘truetype’), url("../fonts/SamsungSans-Medium.ttf") format(‘truetype’), url("../fonts/SamsungSans-Regular.ttf") format(‘truetype’) url("../fonts/SamsungSans-Thin.ttf") format(‘truetype’);
+	font-family: 'SamsungSansMedium';
+	src: url('../fonts/SamsungSans-Medium.ttf') format('truetype');
+
+    font-stretch: normal;
+    font-weight: normal;
+    font-style: normal;
+}  
+ */
+@font-face {
+  font-family: "SamsungSansMedium";
+  src: url("../fonts/SamsungOne-400.woff") format("woff2"), url("../font/SamsungOne-400.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SamsungSansBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Samsung Sharp Sans Bold"), url("../font/samsungsharpsans-bold.woff") format("woff");
 }
 .title-XS {
   color: #FFF;
   text-align: center;
-  font-family: "SamsungSans", sans-serif;
+  font-family: "SamsungSansBold", sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 21.6px */
 }
 
 .title-M {
   color: #FFF;
-  font-family: "SamsungSans", sans-serif;
+  font-family: "SamsungSansMedium", sans-serif;
   font-size: 32px;
-  font-style: normal;
   font-weight: 500;
   line-height: 160%; /* 51.2px */
 }
 
 .title-L {
   color: #FFF;
-  font-family: "SamsungSans", sans-serif;
+  font-family: "SamsungSansBold", sans-serif;
   font-size: 54px;
-  font-style: normal;
   font-weight: 700;
   line-height: 130%; /* 70.2px */
-  margin-bottom: 24px;
+  margin: 24px 0px;
 }
 
 .title-XL {
   color: #FFF;
-  font-family: "SamsungSans", sans-serif;
+  font-family: "SamsungSansBold", sans-serif;
   font-size: 72px;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
   line-height: 130%; /* 93.6px */
 }
 
 .body-S {
   color: #000;
-  font-family: "SamsungSans", sans-serif;
+  font-family: "SamsungSansMedium", sans-serif;
   font-size: 15px;
-  font-style: normal;
   font-weight: 700;
   line-height: 160%; /* 24px */
   margin-bottom: 24px;
@@ -53,16 +74,15 @@
 
 .body-M {
   color: #FFF;
-  font-family: "SamsungSans", sans-serif;
+  font-family: "SamsungSansMedium", sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 160%; /* 25.6px */
 }
 
 .body-L {
   color: #FFF;
-  font-family: "SamsungSans", sans-serif;
+  font-family: "SamsungSansMedium", sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 500;
@@ -90,18 +110,22 @@ ol, ul {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 body {
   background-color: #ffffff;
+  font-family: "SamsungSansMedium", sans-serif;
 }
 
 .samsungBtn {
   width: auto;
+  font-family: "SamsungSansMedium", sans-serif;
   height: 42px;
   padding: 8px 28px;
   border-radius: 24px;
   font-size: 14px;
+  margin-bottom: 24px;
   cursor: pointer;
 }
 .samsungBtn.btn-light {
@@ -118,28 +142,34 @@ body {
 }
 
 .nav-menu {
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
   width: 100%;
   height: 70px;
-  background-color: rgb(255, 255, 255);
-  font-family: Arial, Helvetica, sans-serif;
-  position: fixed;
   display: flex;
+  position: fixed;
   align-items: center;
-  justify-content: space-around;
-  z-index: 1;
+  justify-content: center;
 }
 .nav-menu.variant-shadow {
   box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.32);
 }
 .nav-menu a {
-  color: #000000;
   font-size: 16px;
   margin: 0 22px;
-  font-weight: 700;
 }
-.nav-menu .vide {
-  width: 158px;
-  height: 25px;
+
+.logo {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  margin-left: 6.25vw;
+  margin-top: 23px;
+}
+
+.menu {
+  position: fixed;
 }
 
 .hero {
@@ -169,12 +199,12 @@ body {
 
 .hero img {
   height: auto;
-  width: 50%;
+  width: 40%;
 }
 
 .hero-section {
   flex: 1;
-  padding: 0 120px;
+  margin: 0px 6.25vw;
 }
 
 .hero-page {
@@ -183,21 +213,11 @@ body {
   background-image: url("../img/bg-noel.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: #000;
-}
-
-.body-M .light {
-  margin-left: 120px;
-  align-items: end;
+  background-color: #080A15;
 }
 
 .container-hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-left: 6.25vw;
-  padding-top: 200px;
-  padding-right: 12.5vw;
+  padding: 200px 12.5vw 0px 6.25vw;
 }
 .container-hero h1 {
   margin-bottom: 54px;
@@ -206,6 +226,11 @@ body {
 .hero-content {
   display: flex;
   flex-direction: row;
+}
+.hero-content p.body-M.light {
+  display: flex;
+  padding-left: 6.25vw;
+  align-items: end;
 }
 
 .category {
@@ -242,7 +267,7 @@ body {
 }
 
 .category-content {
-  padding: 0px 6.25vw;
+  margin: 0px 6.25vw;
 }
 
 /* CAROUSSEL
