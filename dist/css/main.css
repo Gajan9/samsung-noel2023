@@ -216,7 +216,8 @@ body {
 }
 
 .card-product p {
-  margin: 0 10px;
+  text-align: center;
+  margin: 0 20px;
 }
 
 @keyframes animation {
@@ -225,11 +226,6 @@ body {
   }
   100% {
     transform: translateX(calc(-100% + 100vw));
-  }
-}
-@media screen and (min-width: 1440px) {
-  .caroussel-flex {
-    animation: animation 5s linear infinite alternate;
   }
 }
 @media screen and (max-width: 770px) {
@@ -241,7 +237,11 @@ body {
   }
 }
 @media screen and (max-width: 500px) {
-  .caroussel-flex {
+  .caroussel {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .caroussel .caroussel-flex {
     animation: animation 25s linear infinite alternate;
   }
 }
@@ -275,7 +275,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-image: url("../img/christmas-bg.png");
-  background-size: 100vh 100%;
+  background-size: contain;
   background-repeat: no-repeat;
   padding-top: 70px;
   margin-bottom: 6vw;
@@ -324,12 +324,13 @@ body {
 @media screen and (max-width: 880px) {
   .hero {
     flex-direction: column;
+    background-size: cover;
   }
   .hero .hero-image {
     width: 80%;
   }
   .products {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .products .section-image {
     width: 80%;
@@ -341,7 +342,7 @@ body {
     margin-right: 6.25vw;
   }
   .hero-page .hero-container {
-    padding: 30vw 12.5vw 0px 6.25vw;
+    padding: 30vw 6.25vw 0px 6.25vw;
   }
 }
 .hero-page {
@@ -413,7 +414,28 @@ body {
   height: auto;
 }
 
+.footer {
+  padding: 4vw 6.25vw;
+  text-align: center;
+}
+
 @media screen and (max-width: 1080px) {
+  .hero-page {
+    height: auto;
+    padding-bottom: 5vh;
+    background-size: cover;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-content h2 {
+    padding-bottom: 15px;
+  }
+  .hero-content p.body-M.light {
+    font-size: 3vw;
+    padding-left: 0;
+  }
   .container {
     flex-direction: column-reverse;
   }

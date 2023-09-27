@@ -37,7 +37,8 @@
 }
 
 .card-product p {
-    margin: 0 10px;
+    text-align: center;
+    margin: 0 20px;
 }
 
 
@@ -50,11 +51,7 @@
     }
 }
 
-@media screen and (min-width : 1440px) {
-    .caroussel-flex {
-        animation: animation 5s linear infinite alternate;
-    }
-}
+
 
 @media screen and (max-width : 770px) {
     .title-XL{
@@ -67,7 +64,13 @@
 
 @media screen and (max-width : 500px) {
 
-    .caroussel-flex {
-        animation: animation 25s linear infinite alternate;
+    .caroussel {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .caroussel-flex {
+            animation: animation 25s linear infinite alternate;
+        }
     }
+
 }

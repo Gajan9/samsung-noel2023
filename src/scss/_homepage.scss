@@ -77,7 +77,33 @@
     }
 }
 
+.footer {
+    padding: 4vw 6.25vw ;
+    text-align: center;
+}
+
 @media screen and (max-width : 1080px) {
+
+    .hero-page{
+        height: auto;
+        padding-bottom: 5vh;
+        background-size: cover;
+
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            padding-bottom: 15px;
+        }
+        p.body-M.light {
+            font-size: 3vw;
+            padding-left: 0;
+        }
+
+    }
+
     .container {
         flex-direction: column-reverse;
 

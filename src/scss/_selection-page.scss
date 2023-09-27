@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     background-image: url("../img/christmas-bg.png");
-    background-size: 100vh 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     padding-top: 70px;
     margin-bottom: 6vw;
@@ -57,12 +57,15 @@
 @media screen and (max-width : 880px) {
     .hero {
         flex-direction: column;
+        background-size: cover;
+
         .hero-image {
             width: 80%;
         }
     }
+
     .products{
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         .section-image {
             width: 80%;            
@@ -71,10 +74,10 @@
         }
         .item-content {
             width: auto;
-            margin-right: 6.25vw
+            margin-right: 6.25vw;
         }
     }
     .hero-page .hero-container{
-        padding: 30vw 12.5vw 0px 6.25vw
+        padding: 30vw 6.25vw 0px 6.25vw;
     }
 }
