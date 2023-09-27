@@ -84,3 +84,19 @@
     color: #FFF;
 }
 
+
+@media screen and (max-width : 520px) {
+    .title-L, .title-M{ 
+        font-size: 7.22222222vw;
+        margin-bottom: 15px;
+    }
+/*     .body-S{
+        font-size: 3.33333333vw;
+    } */
+    .body-L{
+        font-size: 3.33333333vw;
+    }
+    .body-M {
+        font-size: 2.38888889vw
+    }
+}

@@ -77,3 +77,41 @@
     }
 }
 
+@media screen and (max-width : 1080px) {
+    .container {
+        flex-direction: column-reverse;
+
+        img {
+            width: 70%;
+        }
+        .category-content {
+            text-align: center;
+        }
+
+    }
+
+    .category.thm-gamer {
+        padding-left: 0px;
+
+        .container{
+            flex-direction: column;
+        }
+    }
+
+    .category.thm-sportif {
+        padding-right: 0px;
+    }
+
+    .category.thm-esthete {
+        padding-left: 0px;
+
+        .container{
+            flex-direction: column;
+        }
+    }
+
+    .category.thm-epicurien {
+        padding-right: 0px;
+    }
+}
+

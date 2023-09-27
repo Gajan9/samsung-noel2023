@@ -1,21 +1,3 @@
-/* @font-face {
-	font-family: 'SamsungSansBold';
-	src: url('../fonts/SamsungSans-Bold.ttf') format('truetype');
-
-    font-stretch: normal;
-    font-weight: normal;
-    font-style: normal
-}  
-
-@font-face {
-	font-family: 'SamsungSansMedium';
-	src: url('../fonts/SamsungSans-Medium.ttf') format('truetype');
-
-    font-stretch: normal;
-    font-weight: normal;
-    font-style: normal;
-}  
- */
 @font-face {
   font-family: "SamsungSansMedium";
   src: url("../fonts/SamsungOne-400.woff") format("woff2"), url("../font/SamsungOne-400.woff") format("woff");
@@ -98,6 +80,21 @@
   color: #FFF;
 }
 
+@media screen and (max-width: 520px) {
+  .title-L, .title-M {
+    font-size: 7.22222222vw;
+    margin-bottom: 15px;
+  }
+  /*     .body-S{
+          font-size: 3.33333333vw;
+      } */
+  .body-L {
+    font-size: 3.33333333vw;
+  }
+  .body-M {
+    font-size: 2.38888889vw;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -118,6 +115,10 @@ body {
   font-family: "SamsungSansMedium", sans-serif;
 }
 
+.btn-flex {
+  display: flex;
+}
+
 .samsungBtn {
   width: auto;
   font-family: "SamsungSansMedium", sans-serif;
@@ -134,7 +135,6 @@ body {
   color: #000000;
 }
 .samsungBtn.btn-light.variant-border {
-  width: auto;
   border: 1px solid #000000;
 }
 .samsungBtn.btn-dark {
@@ -142,6 +142,12 @@ body {
   color: #ffffff;
 }
 
+@media screen and (max-width: 600px) {
+  .samsungBtn {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
 .menu {
   background-color: rgb(255, 255, 255);
   width: 100%;
@@ -184,7 +190,7 @@ body {
   display: flex;
   position: absolute;
   justify-content: center;
-  animation: animation 20s linear infinite alternate;
+  animation: animation 10s linear infinite alternate;
 }
 .caroussel-flex .item1 img {
   background-color: #A6B2F6;
@@ -221,6 +227,24 @@ body {
     transform: translateX(calc(-100% + 100vw));
   }
 }
+@media screen and (min-width: 1440px) {
+  .caroussel-flex {
+    animation: animation 5s linear infinite alternate;
+  }
+}
+@media screen and (max-width: 770px) {
+  .title-XL {
+    font-size: 8.33333333vw;
+  }
+  .caroussel-flex {
+    animation: animation 15s linear infinite alternate;
+  }
+}
+@media screen and (max-width: 500px) {
+  .caroussel-flex {
+    animation: animation 25s linear infinite alternate;
+  }
+}
 .slide-down {
   transform: translateY(-20%);
   opacity: 0;
@@ -238,12 +262,21 @@ body {
   opacity: 1;
 }
 
+@media screen and (max-width: 800px) {
+  .slide-up {
+    transform: translateX(-20%);
+  }
+  .slide-down {
+    transform: translateX(20%);
+  }
+}
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-image: url("../img/christmas-bg.png");
-  background-size: contain;
+  background-size: 100vh 100%;
+  background-repeat: no-repeat;
   padding-top: 70px;
   margin-bottom: 6vw;
 }
@@ -271,7 +304,7 @@ body {
 .products {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* ? */
   margin-bottom: 6vw;
 }
 .products .item-content {
@@ -288,6 +321,29 @@ body {
   margin-left: 6.25vw;
 }
 
+@media screen and (max-width: 880px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero .hero-image {
+    width: 80%;
+  }
+  .products {
+    flex-direction: column-reverse;
+  }
+  .products .section-image {
+    width: 80%;
+    margin-left: 0px;
+    margin-bottom: 6vw;
+  }
+  .products .item-content {
+    width: auto;
+    margin-right: 6.25vw;
+  }
+  .hero-page .hero-container {
+    padding: 30vw 12.5vw 0px 6.25vw;
+  }
+}
 .hero-page {
   height: 100vh;
   width: 100%;
@@ -355,4 +411,34 @@ body {
 .container img {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .container img {
+    width: 70%;
+  }
+  .container .category-content {
+    text-align: center;
+  }
+  .category.thm-gamer {
+    padding-left: 0px;
+  }
+  .category.thm-gamer .container {
+    flex-direction: column;
+  }
+  .category.thm-sportif {
+    padding-right: 0px;
+  }
+  .category.thm-esthete {
+    padding-left: 0px;
+  }
+  .category.thm-esthete .container {
+    flex-direction: column;
+  }
+  .category.thm-epicurien {
+    padding-right: 0px;
+  }
 }

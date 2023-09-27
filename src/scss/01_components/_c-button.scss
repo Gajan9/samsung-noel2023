@@ -1,3 +1,6 @@
+.btn-flex{
+    display: flex;
+}
 .samsungBtn {
     width: auto;
     font-family: 'SamsungSansMedium', sans-serif;
@@ -9,14 +12,11 @@
     margin-right: 10px;
     cursor: pointer;
 
-
-
     &.btn-light{
         background-color: #ffffff;
         color: #000000;   
 
         &.variant-border{
-            width: auto;
             border: 1px solid #000000;
         } 
     }
@@ -25,4 +25,13 @@
         background-color: #000000;
         color: #ffffff;
     }
+}
+
+@media screen and (max-width : 600px) {
+
+    .samsungBtn {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
 }

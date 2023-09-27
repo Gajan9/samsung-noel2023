@@ -49,3 +49,25 @@
         transform:translateX(calc(-100% + 100vw));
     }
 }
+
+@media screen and (min-width : 1440px) {
+    .caroussel-flex {
+        animation: animation 5s linear infinite alternate;
+    }
+}
+
+@media screen and (max-width : 770px) {
+    .title-XL{
+        font-size: 8.33333333vw;
+    }
+    .caroussel-flex {
+        animation: animation 15s linear infinite alternate;
+    }
+}
+
+@media screen and (max-width : 500px) {
+
+    .caroussel-flex {
+        animation: animation 25s linear infinite alternate;
+    }
+}

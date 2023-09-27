@@ -4,11 +4,10 @@
     align-items: center;
     justify-content: space-between;
     background-image: url("../img/christmas-bg.png");
-    background-size: contain;
+    background-size: 100vh 100%;
+    background-repeat: no-repeat;
     padding-top: 70px;
     margin-bottom: 6vw;
-
-
 
     &.gamer {
         background-color: #000;
@@ -36,7 +35,7 @@
 .products{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* ? */
     margin-bottom: 6vw;
 
     .item-content {
@@ -55,3 +54,27 @@
 
 }
 
+@media screen and (max-width : 880px) {
+    .hero {
+        flex-direction: column;
+        .hero-image {
+            width: 80%;
+        }
+    }
+    .products{
+        flex-direction: column-reverse;
+
+        .section-image {
+            width: 80%;            
+            margin-left: 0px;
+            margin-bottom: 6vw;
+        }
+        .item-content {
+            width: auto;
+            margin-right: 6.25vw
+        }
+    }
+    .hero-page .hero-container{
+        padding: 30vw 12.5vw 0px 6.25vw
+    }
+}
