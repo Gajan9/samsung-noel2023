@@ -37,7 +37,7 @@ gulp.task('html', function () {
   // Tâche pour optimiser les images
 gulp.task('images', function () {
   return gulp
-    .src('src/img/*') // Chemin des fichiers images
+    .src('src/img/**/*') // Chemin des fichiers images
     .pipe(gulp.dest('dist/img')) // Dossier de destination pour les images optimisées
 });
 

@@ -3,10 +3,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-image: url("../img/christmas-bg.png");
+    background-size: contain;
+    padding-top: 70px;
+    margin-bottom: 6vw;
+
+
 
     &.gamer {
         background-color: #000;
-        padding-top: 70px;
     }
     &.sportif {
         background-color: #EBF98D;
@@ -15,7 +20,7 @@
         background-color: #EAEFEF;
     }
     &.epicurien {
-        background-color: #EBF98D;
+        background-color: #00F294;
     }
     .hero-section {
         flex: 1;
@@ -32,6 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 6vw;
 
     .item-content {
         flex: 1;

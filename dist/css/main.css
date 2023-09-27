@@ -184,7 +184,7 @@ body {
   display: flex;
   position: absolute;
   justify-content: center;
-  animation: animation 10s linear infinite alternate;
+  animation: animation 20s linear infinite alternate;
 }
 .caroussel-flex .item1 img {
   background-color: #A6B2F6;
@@ -242,10 +242,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-image: url("../img/christmas-bg.png");
+  background-size: contain;
+  padding-top: 70px;
+  margin-bottom: 6vw;
 }
 .hero.gamer {
   background-color: #000;
-  padding-top: 70px;
 }
 .hero.sportif {
   background-color: #EBF98D;
@@ -254,7 +257,7 @@ body {
   background-color: #EAEFEF;
 }
 .hero.epicurien {
-  background-color: #EBF98D;
+  background-color: #00F294;
 }
 .hero .hero-section {
   flex: 1;
@@ -269,6 +272,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 6vw;
 }
 .products .item-content {
   flex: 1;
@@ -334,7 +338,7 @@ body {
   padding-left: 6.25vw;
 }
 .category.thm-epicurien {
-  background-color: #EBF98D;
+  background-color: #00F294;
   color: #000;
   padding-right: 6.25vw;
 }
