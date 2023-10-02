@@ -99,6 +99,8 @@
   margin: 0;
   padding: 0;
   border: 0;
+  /* 	overflow-x: hidden;
+   */
 }
 
 ol, ul {
@@ -108,6 +110,10 @@ ol, ul {
 a {
   text-decoration: none;
   color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 body {
@@ -148,37 +154,108 @@ body {
     margin-bottom: 15px;
   }
 }
-.menu {
-  background-color: rgb(255, 255, 255);
+.nav-menu {
+  position: fixed;
   width: 100%;
   height: 70px;
   display: flex;
-  position: fixed;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  z-index: 50;
 }
-.menu.variant-shadow {
-  box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.32);
+.nav-menu.variant-shadow {
+  box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.32);
+}
+.nav-menu .logo {
+  margin-left: 6.25vw;
+}
+.nav-menu .menu-burger {
+  display: none;
+  margin-right: 6.25vw;
+}
+.nav-menu .menu-xmark {
+  display: none;
+  margin-right: 6.25vw;
+}
+
+.menu {
+  display: flex;
+  margin-right: 6.25vw;
 }
 .menu a {
-  font-size: 16px;
   margin: 0 22px;
+}
+.menu a.underline {
+  text-decoration: underline;
+}
+.menu span {
+  color: rgba(4, 6, 22, 0.6);
+}
+
+@media screen and (max-width: 880px) {
+  .nav-menu .menu-burger {
+    display: block;
+    z-index: 20;
+  }
+  .menu {
+    position: absolute;
+    margin-right: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    margin-right: -100%;
+    z-index: -1;
+    transition: margin-right 0.5s ease-out;
+  }
+  .menu a, .menu span {
+    margin: 22px 0;
+    font-size: 16px;
+  }
+  .mobile-menu {
+    margin-right: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: margin-right 0.5s ease-out;
+  }
+}
+/* .menu {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content:center;
+
+    &.variant-shadow{
+        box-shadow: 0px 5px 14px 0px rgba(0,0,0,0.32);
+    }
+
+    a {
+        font-size: 16px;
+        margin: 0 22px;
+    }
 }
 
 .logo {
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 100;
-  margin-left: 6.25vw;
-  margin-top: 23px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 100;
+    margin-left: 6.25vw;
+    margin-top: 23px;
 }
 
-.nav-menu {
-  position: fixed;
-  z-index: 50;
-}
-
+.nav-menu{
+    position: fixed;
+    z-index: 50;
+} */
 .caroussel {
   width: 100%;
   height: 400px;

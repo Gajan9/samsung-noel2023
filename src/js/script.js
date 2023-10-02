@@ -45,6 +45,14 @@ window.addEventListener('scroll', SlideUp);
 
 
 
+// Menu Hamburger 
+const menuBurger = document.querySelector(".menu-burger");
+const navBar = document.querySelector(".menu");
+
+menuBurger.addEventListener('click', () => {
+    navBar.classList.toggle('mobile-menu');
+    console.log("menuHamburger");
+})
 
 
 
